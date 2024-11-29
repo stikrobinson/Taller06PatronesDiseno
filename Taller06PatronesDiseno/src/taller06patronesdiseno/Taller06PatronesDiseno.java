@@ -14,7 +14,17 @@ public class Taller06PatronesDiseno {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Crear una notificación básica
+        Notifier notificacion = new BasicNotifier();
+
+        // Agregar decoradores dinámicamente
+        notificacion = new WhatsAppDecorator(notificacion);
+        notificacion = new SignalDecorator(notificacion);
+        notificacion = new WireDecorator(notificacion);
+        notificacion = new TelegramDecorator(notificacion);
+
+        // Enviar las notificaciones
+        notificacion.enviar();
+    }
     }
     
-}
