@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package taller06patronesdiseno;
+import taller06patronesdiseno.Facade.Facade;
+import taller06patronesdiseno.Facade.CanalMovil;
+import taller06patronesdiseno.Facade.CanalTelefonico;
+import taller06patronesdiseno.Facade.CanalWeb;
 
 /**
  *
@@ -13,18 +17,6 @@ public class Taller06PatronesDiseno {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // Crear una notificación básica
-        Notifier notificacion = new BasicNotifier();
-
-        // Agregar decoradores dinámicamente
-        notificacion = new WhatsAppDecorator(notificacion);
-        notificacion = new SignalDecorator(notificacion);
-        notificacion = new WireDecorator(notificacion);
-        notificacion = new TelegramDecorator(notificacion);
-
-        // Enviar las notificaciones
-        notificacion.enviar();
-    }
+    public static void main(String[] args){
     }
     
